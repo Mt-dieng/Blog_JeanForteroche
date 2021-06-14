@@ -9,7 +9,7 @@ $title = "Accueil"; ?>
             <div class="welcom-main">
               <div class="welcom-msg border-right-0 text-center">
                 <h1>Bienvenue sur mon blog !</h1>
-                  <a href="#presentation" class="btn btn-welcom btn-lg my-4 scroll-smooth">En savoir plus</a>
+                  <a href="#presentation" class="btn btn-outline-info">En savoir plus</a>
               </div>
             </div>
           </div>
