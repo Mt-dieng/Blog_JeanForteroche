@@ -16,7 +16,7 @@
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
-    <!-- <link  href="public/css/signin.css" rel="stylesheet" type="text/css"  /> -->
+    <!-- <link  href="./public/css/styleError.css" rel="stylesheet" /> -->
     <link  href="public/css/styles.css" rel="stylesheet" />
 
 
@@ -31,8 +31,8 @@
 
   <!-- ======= body ========= -->
   <body>
-    <header class="wallpaper">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <header class="wallpaper bg-light">
+      <nav class="navbar navbar-expand-lg navbar-dark nav1">
         <a class="navbar-brand" href="/">Jean Forteroche</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -68,11 +68,11 @@
     <!-- Main -->
    
     <!-- Footer -->
-    <footer class="page-footer font-small cyan darken-3">     
-      <div id="footer" class="py-5 bg-dark border-right-0 text-white border-right-0 text-center"> 
+    <footer class="page-footer font-small darken-3 footer1">     
+      <div id="footer" class="py-5 border-right-0 text-white border-right-0 text-center"> 
         <div class="row justify-content-arround">
           <div class="col-md-6">
-            <a class="btn btn-primary" href="/admin/">Se connecter</a>
+            <a class="btn btn-outline-light" href="#">Se connecter</a>
           </div>   
           <div class="col-md-6 footer-copyright text-center py-3">
             <p>Site web fictif projet 4 openclassroom</p>Copyright © 2021 <a href="#" ><em>by Malamine Dieng</em></a> 

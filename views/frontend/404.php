@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="stylesheet"  type="text/css" href="/public/styleError.css">
+<link rel="stylesheet"  type="text/css" href="./public/css/styleError.css">
 <title>Erreur404</title>
 </head>
 <body>
