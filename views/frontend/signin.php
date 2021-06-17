@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 
 
-<section id="loginFrame" class="bg-info" >
+<section id="signupForm" class="bg-info" >
     
     <legend class="text-center p-5">Connexion</legend>
     <form class="text-center p-2 mb-3">

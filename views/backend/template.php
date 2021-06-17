@@ -43,21 +43,17 @@
               <a class="nav-link active" href="#">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#presentation">Présentation</a>
-            </li>
-            <li class="nav-item">
               <a class=" nav-link" href="#">Les derniers chapitres</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Connexion</a>
             </li>   
-            <li class="nav-item"><a class="nav-link" href="/admin/log_out"><span><i class="fas fa-sign-out-alt"></i></span></a></li>   
+            <li class="nav-item"><a class="nav-link" href=""><span><i class="fas fa-sign-out-alt"></i></span></a></li>   
           </ul>
         </div>
       </nav>
       <!-- Fin nav -->
 
-     
       <!-- Fin message de bienvenue -->
     </header>
     <!-- Fin Header -->
