@@ -13,32 +13,56 @@
     <p class="text-center">
         <a href="index.php">Retour à la liste des billets</a>
     </p>
-    <h2 class="text-center">Commentaires</h2>
+    <h2 class="text-center">Les derniers chapitres</h2>
 
-    <div class="modal-dialog mb-2" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">
-                    <!-- Date et auteur -->
-                </h5>
-
+    <div class="row">
+                <div class="col-lg-6">
+                    <div class="card mb-4">
+                    <div class="card-body">
+                                    <div class="small text-muted">January 1, 2021</div>
+                                    <h2 class="card-title h4 text-primary">Post Title</h2>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+                                    <a class="btn btn-info" href="#!">Read more →</a>
+                                </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-                <p></p>
-            </div>
-        </div>
-    </div>
 
-    <p></p>
-    <div id="commentForm" class="pb-5 pt-5 mx-auto">
-        <p class="text-center">Vous voulez réagir ?</p>
+    <div id="commentForm" class="pb-5 pt-5  text-center">
         <form class="mx-auto" action="" method="post">
-            <label for="comment">Commentaire :</label></br>
-            <textarea id="comment" name="comment"></textarea>
+            <div class="form-group">
+                <label for="exampleTextarea" class="form-label mt-4">Commentaires</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            </div>
             </br>
-            <input type="submit" value="Envoyer" />
+            <button type="submit" value="Envoyer" class="btn btn-success">Envoyer</button>    
         </form>
     </div>
+    <div>
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#">&laquo;</a>
+    </li>
+    <li class="page-item active">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">3</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">4</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">5</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">&raquo;</a>
+    </li>
+  </ul>
+</div>
     </section>
     <?php $content = ob_get_clean(); ?>
 

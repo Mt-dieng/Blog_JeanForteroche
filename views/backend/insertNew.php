@@ -6,7 +6,7 @@ $title = "Ajouter une news"; ?>
 
 <section id="#" class="mx-auto align-middle">
 	<h1 class="text-center">Panel d'administration</h1>
-	<div id="formInsert" class="mx-auto">
+	<div id="formInsert" class="mx-auto pb-5">
 		<div>
 			<form action="#" method="post">
 				<label for="title">Titre : </label>
