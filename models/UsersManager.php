@@ -19,6 +19,15 @@ class UsersManager extends Manager{
         return $newUser;
     }
 
+    //suppression de membre
+    public function delete_user($u_pseudo){
+        $bdd = $this->getBdd();
+        $req = $bdd->prepare('DELETE FROM users WHERE id = ?');
+        $deletedUser = $req->execute(array($userId));
+
+        return $deletedUser;
+    }
+
     // Vérification mail 
     public function mailExist($u_mail){
         $bdd= $this->getBdd();

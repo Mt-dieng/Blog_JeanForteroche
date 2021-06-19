@@ -32,10 +32,10 @@
         <form class="mx-auto" action="" method="post">
             <div class="form-group">
                 <label for="exampleTextarea" class="form-label mt-4">Commentaires</label>
-                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                <textarea class="form-control"  placeholder="Votre commentaire ..." id="exampleTextarea" rows="3"></textarea>
             </div>
             </br>
-            <button type="submit" value="Envoyer" class="btn btn-success">Envoyer</button>    
+            <input type="submit" class="btn btn-success" value="Commenter" />
         </form>
     </div>
     <div>

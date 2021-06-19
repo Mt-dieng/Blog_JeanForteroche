@@ -10,7 +10,7 @@ try {
     if (isset($_GET['action'])) {
         switch ($_GET['action']) {
             case 'home' :
-                getHome();
+                showHome();
                 break;
 
             // case 'admin':
@@ -23,7 +23,7 @@ try {
         }
     } else {
         // show home
-        getHome();
+        showHome();
     
     }
 } catch (Exception $e){

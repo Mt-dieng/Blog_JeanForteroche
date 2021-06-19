@@ -4,15 +4,15 @@ $title = "Modifier une news"; ?>
 
 <?php ob_start(); ?>
 
-<section id="adminPanel">
+<section class=" text-center" id="#">
 	<h1 class="text-center">Panel d'administration</h1>
 	<div>
-		<div id="formUpdate" class="p-5">
+		<div id="formUpdate" class=" m-4 p-5">
 			<form action="" method="post">
 				<label for="title">Titre : </label>
-				<input type="text" name="title" id="title" value="" /><br />
-				<textarea name="content" class="form-control" id="exampleTextarea" rows="20" cols="40"></textarea>
-				<input class="mb-5" type="submit" value="Modifier" />
+				<input type="text" name="title" placeholder="Votre titre" id="title" value="" /><br />
+				<textarea name="content" class="form-control" id="contenuTinyMCE" rows="10" cols="20"></textarea><br />
+				<input class="btn btn-outline-info" type="submit" value="Modifier" />
 			</form>
 		</div>
 	</div>
