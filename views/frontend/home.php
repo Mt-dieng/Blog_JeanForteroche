@@ -2,6 +2,7 @@
 $title = "Accueil"; ?>
 
 <?php ob_start(); ?>
+
  <!-- Message de bienvenue -->
   <div class="container">
       <div class="row justify-content-center">
@@ -16,8 +17,7 @@ $title = "Accueil"; ?>
       </div>                 
   </div>
  <!-- Présentation -->
-  <section>
-    
+  <section> 
     <div class="container">
       <!-- Titre de la présentation -->
       <div class= "text-center">
@@ -41,27 +41,47 @@ $title = "Accueil"; ?>
 <!-- Présentation -->
 <!-- Les chapitres -->
   <section class="container my-4">
+  <?php 
+  
+  $datas = $news->fetchAll(); 
+
+
+if(!$datas)
+  {
+    echo'Pas de chapitre';
+  
+  } else{
+    for ($i=0; $i <count($datas); $i++) { 
+?>
     <div class="row ">
       <h1 class="text-uppercase text-center my-4" id="chap">Les derniers chapitres</h1>
       <div class="col-lg-12">      
-        <div class="card mb-3">  
+        <div class="card mb-3"> 
+
+        <!-- date de publication -->
+        <div class="card-header"><?= $datas[$i]['created_at_fr']; ?></div>
           <div class="card-body">
-            <h5 class="card-title"></h5>
-              <?php
-              
-              ?>
-                <h2><a href="#"></a></h2>
-                <p></p>
-            
+          <!-- titre de la new -->
+            <h5 class="card-title"><?= $datas[$i]['title']; ?></h5>
+            <!-- contenu de la new -->
+            <div class="card-text">
+            <?=
+                  $previewContent = substr($datas[$i]['content'], 0, 250);
+                  echo $previewContent .'...';
+            ?>
+            </div>
+            <div class="read-more">
+              <a href="index.php?action=single_new&amp;id=<?= $datas[$i]['id']; ?>">Lire la suite. . .</a>
+            </div>
+            <?php
+          }
+  }
+  ?>
+ 
           </div>
         </div>
       </div>
     </div>
-    <!-- Les chapitres -->
-
-    <!-- Pagniantion -->
-  
-    <!-- Pagination -->
   </section>
 
   <?php $content = ob_get_clean(); ?>

@@ -4,50 +4,53 @@ namespace blog_jeanforteroche\models;
 
 class NewsManager extends Manager{
     
-    //fonction pour récupérer tous les chapitres
+    //fonction pour récupérer tous les news
     public function getAllNews(){
         $bdd = $this->getBdd();
-        $chapitres = $bdd->query("SELECT id, author, title, content, created_at, DATE_FORMAT(created_at, '%d/%m/%Y %H:%i:%s') AS date_fr  FROM news ORDER BY created_at ");
+        $req = $bdd->query("SELECT id, author, title, content, DATE_FORMAT(created_at, '%d/%m/%Y %H:%i:%s') AS created_at_fr, DATE_FORMAT(updated_at, '%d/%m/%Y %H:%i:%s') AS updated_at_fr  FROM news ORDER BY created_at ");
         
-        return $chapitres;
+        // var_dump($req);
+        // die();
+        return $req;
+        
     }
     
-    //fontcion pour récupérer un chapitre 
+    //fontcion pour récupérer un new 
     public function getNew($id){
         $bdd = $this->getBdd();
-        $chapitres = $bdd->query("SELECT id, author, title, content, created_at, DATE_FORMAT(created_at, '%d/%m/%Y %H:%i:%s') AS date_fr  FROM news ORDER BY created_at ");
-        $chapitres->execute(array($id));
-        $chapitre = $chapitres->fetch();
+        $req = $bdd->query("SELECT id, author, title, content, DATE_FORMAT(created_at, '%d/%m/%Y %H:%i:%s') AS created_at_fr, DATE_FORMAT(updated_at, '%d/%m/%Y %H:%i:%s') AS updated_at_fr FROM news ORDER BY created_at ");
+        $req->execute(array($id));
+        $new = $req->fetch();
 
-        return $chapitre;
+        return $new;
     }
 
-        //Fonction pour mettre à jour un chapitre
+        //Fonction pour mettre à jour un new
     public function updateNew($title, $content, $id){
         $bdd = $this->getBdd();
-        $chapitres = $bdd->prepare('UPDATE news SET title = ?, content = ?, update_date = NOW() WHERE id = ?');
-        $chapitres->execute(array($title, $content, $id));
-        $updated = $chapitres->fetch();
+        $new = $bdd->prepare('UPDATE news SET title = ?, content = ?, updated_at = NOW() WHERE id = ?');
+        $new->execute(array($title, $content, $id));
+        $updated = $new->fetch();
     
         return $updated;
     }
     
-    //Fonction pour créer un chapitre
+    //Fonction pour créer un new
     public function createNew($title, $content){
         $bdd = $this->getBdd();
-        $chapitres = $bdd->prepare('INSERT INTO news(title, content,creation_at, update_date) VALUES (?, ?, NOW(), NOW())');
-        $chapitres->execute(array($title, $content));
-        $newChapitre = $chapitres->fetch();
+        $new = $bdd->prepare('INSERT INTO news(title, content,created_at, updated_at) VALUES (?, ?, NOW(), NOW())');
+        $new->execute(array($title, $content));
+        $newChapitre = $new->fetch();
 
         return $newChapitre;
     }
     
-    //Fonction pour sup un chapitre
+    //Fonction pour sup un new
     public function deleteNew($id){
         $bdd = $this->getBdd();
-        $chapitres = $bdd->prepare('DELETE FROM news WHERE id = ?');
-        $chapitres->execute(array($id));
-        $deletedChapitre = $chapitres->fetch();
+        $new = $bdd->prepare('DELETE FROM news WHERE id = ?');
+        $new->execute(array($id));
+        $deletedChapitre = $new->fetch();
     
         return $deletedChapitre;
     }

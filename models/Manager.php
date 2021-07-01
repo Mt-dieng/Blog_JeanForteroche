@@ -8,4 +8,11 @@ class Manager
         $bdd = new \PDO('mysql:host=localhost;dbname=blog;charset=utf8', 'root', '');
         return $bdd;
     }
+
+    //clés recaptcha
+    public function recapKeys() {
+        $keys = '6LcGdGcbAAAAABnrWUEn8TGsZQ7gGb2_6OwjQGDz';
+
+        return $keys;
+    }
 }

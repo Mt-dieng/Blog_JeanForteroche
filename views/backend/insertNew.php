@@ -5,9 +5,9 @@ $title = "Ajouter une news"; ?>
 <?php ob_start(); ?>
 
 <section id="#" class="mx-auto text-center">
-	<h1 class="text-center">Panel d'administration</h1>
-	<div id="formInsert" class="m-4 p-5">
-		<div>
+	<div class="frame">
+		<h1 class="text-center" id="adminPanel">Panel d'administration</h1>
+		<div id="formInsert" class="m-4 p-5">
 			<form action="#" method="post">
 				<label for="title">Titre : </label>
 				<input type="text" name="title" id="title" placeholder="Votre titre" size="30" /><br />

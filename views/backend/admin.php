@@ -31,8 +31,7 @@ $title= 'Panel Administration';
             </thead>
             <tbody>
             <tr>
-                <td>a</td>
-                <td>a</td>
+               
             </tr>
             </tbody>
         

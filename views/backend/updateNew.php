@@ -4,9 +4,9 @@ $title = "Modifier une news"; ?>
 
 <?php ob_start(); ?>
 
-<section class=" text-center" id="#">
-	<h1 class="text-center">Panel d'administration</h1>
-	<div>
+<section class=" text-center p-5" id="#">
+	<div class="frame">
+		<h1 class="text-center" id="adminPanel">Panel d'administration</h1>
 		<div id="formUpdate" class=" m-4 p-5">
 			<form action="" method="post">
 				<label for="title">Titre : </label>

@@ -5,6 +5,16 @@ use \blog_jeanforteroche\models\Manager;
 
 class UsersManager extends Manager{
 
+    public function loginUsers($u_pseudo)
+    {
+        $bdd = $this->getBdd();
+        $req = $bdd->prepare('SELECT u_id, u_pass, u_admin FROM users WHERE u_pseudo = ?');
+        $req->execute(array($u_pseudo));
+        $user = $req->fetch();
+
+        return $user;
+    }
+
     public function getUsers(){
         $bdd= $this->getBdd();
         $user= $bdd->query('SELECT u_id, u_pseudo, u_admin FROM users ORDER BY id');
@@ -23,7 +33,7 @@ class UsersManager extends Manager{
     public function delete_user($u_pseudo){
         $bdd = $this->getBdd();
         $req = $bdd->prepare('DELETE FROM users WHERE id = ?');
-        $deletedUser = $req->execute(array($userId));
+        $deletedUser = $req->execute(array($u_pseudo));
 
         return $deletedUser;
     }
@@ -51,5 +61,4 @@ class UsersManager extends Manager{
         return $userPseudoExist;
     }
 
-    // Vérification pseudo dans la base de donnée
 }
